@@ -1,0 +1,15 @@
+.botão{
+  position: relative;
+  margin-top:24px;
+  margin-left: 16px;
+
+}
+.linha{
+  display: flex;
+}
+.numero{
+  display:contents
+}
+.linha2{
+  display: flex;
+}
