@@ -1,3 +1,4 @@
+import { ConsultaCepService } from './../app/shared/consulta-cep.service';
 import { EstadosBr } from './../app/shared/models/estados-br';
 import { DropdownService } from './../app/shared/services/dropdown.service';
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +18,9 @@ export class DataFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private ropdownService: DropdownService) { }
+    private ropdownService: DropdownService,
+    private cepService: ConsultaCepService
+    ) { }
 
   ngOnInit() {
     /*this.formulario = new FormGroup({

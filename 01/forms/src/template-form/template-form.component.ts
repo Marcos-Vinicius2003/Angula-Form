@@ -1,3 +1,4 @@
+import { ConsultaCepService } from './../app/shared/consulta-cep.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -22,7 +23,10 @@ export class TemplateFormComponent implements OnInit {
   }
 
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private cepService: ConsultaCepService
+    ) { }
 
   ngOnInit(): void {
   }
