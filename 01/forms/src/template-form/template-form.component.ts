@@ -45,14 +45,14 @@ export class TemplateFormComponent implements OnInit {
 
     cep = cep.replace(/\D/g, '');
 
+    if  (cep != null && cep !== ''){
+      this.cepService.consultaCEP(cep)
+      .subscribe(dados => this.populaDadosForm(dados, form));
+    }
+
     this.resetaDadosForm(form);
 
 
-    if (cep !== '') {
-         this.http.get(`https://viacep.com.br/ws/${cep}/json`)
-
-         .subscribe(dados => this.populaDadosForm(dados, form));
-      }
     }
     populaDadosForm(dados, formulario) {
       /*form.setValue({
