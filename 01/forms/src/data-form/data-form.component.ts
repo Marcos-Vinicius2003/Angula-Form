@@ -1,4 +1,4 @@
-import { EstadoBr } from './../app/shared/models/estado-br.spec';
+import { EstadoBr } from './../app/shared/models/estado-br.model';
 import { ConsultaCepService } from './../app/shared/consulta-cep.service';
 import { DropdownService } from './../app/shared/services/dropdown.service';
 import { HttpClient } from '@angular/common/http';
@@ -90,7 +90,7 @@ export class DataFormComponent implements OnInit {
   }
 
   verificarEmailInvalido(){
-    let campoEmail = this.formulario.get('email');
+    const campoEmail = this.formulario.get('email');
     if (campoEmail.errors){
       return campoEmail.errors[' email '] && campoEmail.touched;
     }
